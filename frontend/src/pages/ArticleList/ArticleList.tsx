@@ -68,7 +68,7 @@ const ArticleList: React.FC<ArticleListProps> = props => {
     return () => {
       history.push(`/articles/edit/${d._id}`);
 
-      TDAPP.onEvent('文章管理-点击编辑');
+      //TDAPP.onEvent('文章管理-点击编辑');
     };
   };
 
@@ -81,7 +81,7 @@ const ArticleList: React.FC<ArticleListProps> = props => {
       await dispatch({
         type: 'article/fetchArticleList',
       });
-      TDAPP.onEvent('文章管理-确认删除');
+      //TDAPP.onEvent('文章管理-确认删除');
     };
   };
 
@@ -93,7 +93,7 @@ const ArticleList: React.FC<ArticleListProps> = props => {
     }
     history.push('/articles/new');
 
-    TDAPP.onEvent('文章管理-创建文章');
+   //TDAPP.onEvent('文章管理-创建文章');
   };
 
   const onArticleTasksModalOpen: Function = (a: Article) => {
@@ -130,7 +130,7 @@ const ArticleList: React.FC<ArticleListProps> = props => {
         payload: fetchHandle,
       });
 
-      TDAPP.onEvent('文章管理-打开发布');
+     //TDAPP.onEvent('文章管理-打开发布');
     };
   };
 
@@ -147,7 +147,7 @@ const ArticleList: React.FC<ArticleListProps> = props => {
     // 取消更新任务状态handle
     await clearInterval(article.fetchHandle);
 
-    TDAPP.onEvent('文章管理-关闭发布');
+   //TDAPP.onEvent('文章管理-关闭发布');
   };
 
   const onArticleTasksPublish: Function = () => {
@@ -162,7 +162,7 @@ const ArticleList: React.FC<ArticleListProps> = props => {
         message.success('已开始发布');
       }
 
-      TDAPP.onEvent('文章管理-确认发布');
+     //TDAPP.onEvent('文章管理-确认发布');
     };
   };
 
@@ -170,7 +170,7 @@ const ArticleList: React.FC<ArticleListProps> = props => {
     return () => {
       window.open(t.url);
 
-      TDAPP.onEvent('文章管理-查看文章原文');
+     //TDAPP.onEvent('文章管理-查看文章原文');
     };
   };
 
@@ -187,7 +187,7 @@ const ArticleList: React.FC<ArticleListProps> = props => {
           payload: true,
         });
 
-        TDAPP.onEvent('文章管理-打开平台设置');
+       //TDAPP.onEvent('文章管理-打开平台设置');
       }
     };
   };
@@ -201,7 +201,7 @@ const ArticleList: React.FC<ArticleListProps> = props => {
       type: 'task/saveCurrentTask',
       payload: undefined,
     });
-    TDAPP.onEvent('文章管理-关闭平台设置');
+   //TDAPP.onEvent('文章管理-关闭平台设置');
   };
 
   const onTaskModalConfirm = () => {
@@ -213,7 +213,7 @@ const ArticleList: React.FC<ArticleListProps> = props => {
       type: 'article/setPlatformModalVisible',
       payload: false,
     });
-    TDAPP.onEvent('文章管理-确认平台设置');
+   //TDAPP.onEvent('文章管理-确认平台设置');
   };
 
   const getDefaultCategory = (p: Platform) => {
@@ -281,7 +281,7 @@ const ArticleList: React.FC<ArticleListProps> = props => {
       console.log(article.currentArticle)
       await saveTasks(selectedPlatforms, article.currentArticle);
 
-      TDAPP.onEvent('文章管理-勾选平台');
+     //TDAPP.onEvent('文章管理-勾选平台');
     }
   };
 
@@ -289,7 +289,7 @@ const ArticleList: React.FC<ArticleListProps> = props => {
     if (article.currentArticle) {
       await saveTasks(selectedPlatforms, article.currentArticle);
 
-      TDAPP.onEvent('文章管理-勾选平台-全选');
+     //TDAPP.onEvent('文章管理-勾选平台-全选');
     }
   };
 
@@ -349,7 +349,7 @@ const ArticleList: React.FC<ArticleListProps> = props => {
         payload: tasks,
       });
 
-      TDAPP.onEvent('文章管理-选择登陆类型');
+     //TDAPP.onEvent('文章管理-选择登陆类型');
     };
   };
 
@@ -643,7 +643,7 @@ const ArticleList: React.FC<ArticleListProps> = props => {
       });
     }
 
-    TDAPP.onEvent('文章管理-访问页面');
+   //TDAPP.onEvent('文章管理-访问页面');
   }, []);
 
   // 平台配置

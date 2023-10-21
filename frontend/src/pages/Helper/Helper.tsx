@@ -6,10 +6,10 @@ import constants from "../../constants";
 const Helper: React.FC<any> = () => {
   const onDownload = () => {
     window.open('https://gitee.com/tanliyuan/artipub/releases/v0.1.5');
-    TDAPP.onEvent('登陆助手-下载登陆助手');
+   //TDAPP.onEvent('登陆助手-下载登陆助手');
   };
 
-  TDAPP.onEvent('登陆助手-访问页面');
+ //TDAPP.onEvent('登陆助手-访问页面');
 
   return (
     <PageHeaderWrapper>

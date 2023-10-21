@@ -46,7 +46,7 @@ const ArticleEdit: React.FC<ArticleEditProps> = props => {
       }
     }
 
-    TDAPP.onEvent('文章编辑-访问页面');
+    //TDAPP.onEvent('文章编辑-访问页面');
   }, []);
 
   // 更新标题
@@ -125,14 +125,14 @@ const ArticleEdit: React.FC<ArticleEditProps> = props => {
       message.success('文章保存成功');
     }
 
-    TDAPP.onEvent('文章编辑-保存文章');
+    //TDAPP.onEvent('文章编辑-保存文章');
   };
 
   // 点击返回
   const onBack = () => {
     history.push('/articles');
 
-    TDAPP.onEvent('文章编辑-返回');
+    //TDAPP.onEvent('文章编辑-返回');
   };
 
   return (

@@ -37,8 +37,27 @@ declare let ga: Function;
 // preview.pro.ant.design 专用环境变量，请不要在你的项目中使用它。
 declare let ANT_DESIGN_PRO_ONLY_DO_NOT_USE_IN_YOUR_PRODUCTION: 'site' | undefined;
 
-interface ITDAPP {
-  onEvent: (eventLabel: string) => {};
+// interface ITDAPP {
+//   onEvent: (eventLabel: string) => {};
+// }
+
+// declare let TDAPP: ITDAPP;
+
+
+/*
+declare namespace//TDAPP {
+  onEvent: (eventLabel: string) => {
+    console.log(eventLabel)
+  };
+}
+*/
+// 这样定义为什么，还不能继续使用？
+/*
+const MYTDAPP = {
+  onEvent: (eventLabel: string) => {
+    console.log(eventLabel)
+  }
 }
 
-declare let TDAPP: ITDAPP;
+declare let TDAPP: MYTDAPP;
+*/

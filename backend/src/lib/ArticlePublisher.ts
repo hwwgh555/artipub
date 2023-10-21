@@ -39,7 +39,8 @@ export default class ArticlePublisher extends BaseExecutor {
         }
       } catch (e) {
         task.status = constants.status.ERROR
-        task.error = e.toString()
+        // error TS18046: 'e' is of type 'unknown
+        // task.error = e.toString()
         await task.save()
         logger.error(e)
       }finally{

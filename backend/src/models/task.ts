@@ -1,7 +1,7 @@
 import { model, Schema, Types  } from "mongoose";
 import type {Document, ObjectId as IObjectId} from 'mongoose'
 import type { IPlatform } from "./platform"
-import { JSONObject, Serializable } from "puppeteer-core";
+// import { JSONObject, Serializable } from "puppeteer-core";
 const ObjectId = require("bson").ObjectId;
 
 export interface ITask extends Document, Timestamp {
